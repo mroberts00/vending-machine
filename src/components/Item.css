@@ -1,0 +1,35 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(0,0,0);
+  padding: 20px;
+  background-color: rgb(199, 199, 199);
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+.item img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.item h2 {
+  text-align: center;
+}
+
+.item button {
+  width: auto;
+  background-color: rgb(85, 207, 69);
+  color: rgb(0,0,0);
+  height: 40px;
+  font-size: 1.2em;
+  border: 1px solid rgb(0,0,0);
+  cursor: pointer;
+}
+
+.item button:disabled {
+  background-color: rgb(158, 158, 158);
+  cursor: initial;
+}
+
+

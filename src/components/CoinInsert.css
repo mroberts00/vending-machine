@@ -1,0 +1,77 @@
+.insert h3 {
+  text-align: center;
+}
+
+.insert ul {
+  margin: 20px auto;
+  max-width: 500px;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.insert li {
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: rgba(192, 192, 192);
+    
+}
+
+.insert li.gold {
+  background-color: rgb(255, 215, 0);
+}
+
+.insert .input {
+  line-height: 2em;
+  font-size: 2em;
+}
+
+.insert .input {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 400px;
+}
+
+.insert .coinSlot {
+  display: flex;
+  align-items: center;
+}
+
+.insert input {
+  background-color: rgb(0,0,0);
+  color: rgb(33, 255, 62);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-align: right;
+  width: 60px;
+  font-size: 1.2em;
+}
+
+.insert button {
+  width: 80px;
+  background-color: rgb(85, 207, 69);
+  color: rgb(0,0,0);
+  height: 40px;
+  border: 1px solid rgb(0,0,0);
+  cursor: pointer;
+  font-size: 0.6em;
+}
+
+.insert button:disabled {
+  background-color: rgb(158, 158, 158);
+  cursor: initial;
+}
+
+.insert .input button {
+  margin-left: 20px;
+}
