@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 @Media all and (max-width: 800px) {

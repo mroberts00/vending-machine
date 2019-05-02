@@ -31,7 +31,7 @@ const CoinInsert = (props) => {
             type="text"
             maxLength='1'
             value={dollars}
-            onChange={e => setDollars(e.target.value)}
+            onChange={e => parseInt(e.target.value) && setDollars(e.target.value)}
             placeholder='0'
           />
           <span>.</span>
