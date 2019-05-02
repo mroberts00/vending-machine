@@ -51,7 +51,7 @@ class App extends Component {
   handlePurchase = async (item) => {
     validatePurchase(item.price, this.state.insertedAmount, this.setAppState) &&
       // Set message after 3s and clear after 10s to restart process
-      await this.setState({ message: `Enjoy your vegan ${item.name} bar`, insertedAmount: 0 })
+      await this.setState({ error: '', message: `Enjoy your vegan ${item.name} bar`, insertedAmount: 0 })
     setTimeout(() => {
       // Ensure message not cleared if new selection is started
       this.state.insertedAmount === 0 && this.setState({ message: '' })

@@ -14,6 +14,10 @@ const CoinInsert = (props) => {
     setCents('')
   }
 
+  const isNumber = value => {
+    return parseInt(value) || value === ''
+  }
+
   return (
     <div className="insert">
       <h3>Accepted Coins</h3>
@@ -31,7 +35,7 @@ const CoinInsert = (props) => {
             type="text"
             maxLength='1'
             value={dollars}
-            onChange={e => parseInt(e.target.value) && setDollars(e.target.value)}
+            onChange={e => isNumber(e.target.value) && setDollars(e.target.value)}
             placeholder='0'
           />
           <span>.</span>
@@ -39,7 +43,7 @@ const CoinInsert = (props) => {
             type="text"
             maxLength='2'
             value={cents > 0 ? cents : dollars ? '00' : ''}
-            onChange={e => parseInt(e.target.value) && setCents(e.target.value)}
+            onChange={e => isNumber(e.target.value) && setCents(e.target.value)}
             placeholder='00'
           />
           <button
