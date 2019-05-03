@@ -35,10 +35,16 @@ describe('App Test Suite', () => {
     expect(wrapper.children(Shop).length).toEqual(1)
   })
 
-  it('should update insertedAmount, message state when setInsertedAmount is fired', () => {
+  it('should update insertedAmount state when setInsertedAmount is fired', () => {
     const { wrapper } = setup();
     wrapper.instance().setInsertedAmount(200)
     expect(wrapper.state('insertedAmount')).toEqual(200)
+  })
+
+  it('should update error state when setInsertedAmount is not a valid coin', () => {
+    const { wrapper } = setup();
+    wrapper.instance().setInsertedAmount(23)
+    expect(wrapper.state('error')).toBe("$0.23 is not a valid coin")
   })
 
   it('should update state with setAppState', () => {
