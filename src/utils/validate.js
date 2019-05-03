@@ -8,7 +8,7 @@ export const validateCoins = (insertedAmount, setAppState) => {
     return false
   }
   if (!whiteList.includes(insertedAmount)) {
-    setAppState('error', "Please insert a valid coin")
+    setAppState('error', `$${(insertedAmount / 100).toFixed(2)} is not a valid coin`)
     return false
   }
   setAppState('error', '')

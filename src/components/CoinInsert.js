@@ -14,6 +14,12 @@ const CoinInsert = (props) => {
     setCents('')
   }
 
+  const setReturn = () => {
+    handleReturn()
+    setDollars('')
+    setCents('')
+  }
+
   const isNumber = value => {
     return parseInt(value) || value === ''
   }
@@ -29,9 +35,10 @@ const CoinInsert = (props) => {
         <li className="gold">$2</li>
       </ul>
       <div className="input">
-        <div className="coinSlot">
+        <form className="coinSlot" onSubmit={e => handleSubmit(e)}>
           <span>$</span>
           <input
+            id="dollars"
             type="text"
             maxLength='1'
             value={dollars}
@@ -40,6 +47,7 @@ const CoinInsert = (props) => {
           />
           <span>.</span>
           <input
+            id="cents"
             type="text"
             maxLength='2'
             value={cents > 0 ? cents : dollars ? '00' : ''}
@@ -47,15 +55,17 @@ const CoinInsert = (props) => {
             placeholder='00'
           />
           <button
-            onClick={handleSubmit}
+            id="submit"
+            type="submit"
             disabled={!dollars && !cents}
           >
             Insert
           </button>
-        </div>
+        </form>
 
         <button
-          onClick={handleReturn}
+          id="return"
+          onClick={setReturn}
           disabled={!insertedAmount}
         >
           Return

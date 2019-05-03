@@ -70,7 +70,7 @@ class App extends Component {
   }
 
   handleReturn = () => {
-    this.setState({ message: `Please take your coins`, insertedAmount: 0, error: '' })
+    this.setState({ message: `$${(this.state.insertedAmount / 100).toFixed(2)} has been returned`, insertedAmount: 0, error: '' })
     // Ensure message not cleared if new selection is started
     setTimeout(() => {
       this.state.insertedAmount === 0 && this.setState({ message: '' })
@@ -101,3 +101,4 @@ class App extends Component {
 }
 
 export default App;
+export { items }
